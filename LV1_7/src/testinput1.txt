@@ -1,0 +1,33 @@
+main() {
+    { int x; char y; loop(x >= 10) { y = 'a'; redo(y < 5.0); } }
+    int a; a = 0x1A;
+    float b; b = 0.5E+10;
+    bool flag; flag = true; loop(flag && false || true) { flag = false; }
+    char c; c = 'C';
+    int d; d = 123;
+    bool result; result = (d == 123) && (b != 0.0);
+    % Comment %
+    loop(result) { d = d + 1; redo(b > 0.0); }
+}
+
+main() {
+    { int x; char y; float z; loop(x >= 10) { y = 'a'; redo(z < 5.0); } }
+    int a;
+    a = 0x1A;
+    float b;
+    b = 0.5E+10;
+    bool flag;
+    flag = true;
+    loop(flag && false || true) { flag = false; }
+    % This is a comment %
+    char c;
+    c = 'C';
+    % Another comment %
+    int d;
+    d = 123;
+    bool result;
+    result = (d == 123) && (b != 0.0);
+    % Multi-line
+       comment %
+    loop(result) { d = d + 1; redo(b > 0.0); }
+}
